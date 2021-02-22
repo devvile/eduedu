@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/nauka.css' %}"/>
+    <title>Document</title>
+  </head>
+  <body>
+    <p><a href="{% url 'index' %}">HOME</a></p>
+    <div class="box">JEZUS</div>
+    <div class="zadania">
+      <p class="question">Co to box model?</p>
+      <p class="answer">
+        Wszystkie elementy w CSS przestawione sa w formie prostokatnych pudelek,
+        na ktore sklada sie content,border, padding i margin.Ich zachowanie
+        mozna ustawic w css przez wlasciwosci "box-sizing". W tym przypadku,
+        okreslamy jaki bedzie zakres definiowania "height" i "width". W
+        przypadku "content-box" W i H okreslaja tylko content, a pozozstale
+        border itd. nie sa uwzglednione. W przypadku Border-box definiujemy
+        ksztalt. razem z paddingiem i borderem.
+      </p>
+      <p class="question">Jakie sa korzysci korzystania a Sass?</p>
+      <p class="answer">
+        Definicja zmiennych ( nie wszystkie przegladarki obsluguja zmienne CSS a
+        SaSS kompiluje sie do CSS bez zmiennych) , zagniezdzanie, funkcje.
+      </p>
+      <p class="question">Czym rozni sie mixin od funkcji w SaSS</p>
+      <p class="answer">
+        Mixin to fragment kodu, ktory wstawiamy sobie w dane miejsce. Moze
+        przyjmowac argumenty ale nic nie zwraca. Funkcja to fragment kodu, ktory
+        moze przyjmowac argumenty ale zwraca jakas wartosc
+      </p>
+      <p class="question">Czy w CSS sa funkcje?</p>
+      <p class="answer">
+        Są, ale nie mamy mozliwosci w czystym css definiowania wlasnych funkcji,
+        mozemy natomiast korzystac z funkcji wbudowanych jak np. calc, czy drop
+        shadow, czy animacje. Media querry tez na swoj sposob jest funckja,
+        ktora przyjmuje warunek i od jego spelnienia uzaleznia sposob
+        prezentacji.
+      </p>
+      <p class="question">Do czego sluzy tag " data" w HTML</p>
+      <p class="answer">
+        Sluzy do zawierania w strukturze dokumnetu dodatkowych danych, poprzez
+        dodanie "data-..." na poczatku mozemy przechowywac dodatkowe infomracje
+        w semantycznych elementach html. Potem latwo dostac do nich dostep z
+        poziomu JSa, przez uzycie getAttribute albo dataset. Mozna dostac sie do
+        tego takze w css przez "attr"
+      </p>
+      <p class="question">CZym rozni sie null od undefined</p>
+      <p class="answer">
+        Jesli zmienna ma wartosc undefined to oznacza, ze zostala zadeklarowana
+        ale jej wartosc nie zostala zdefiniowana. Natomiast wartosc null jest
+        wartoscia zdeklarowana jako nie posiadajaca wartosci. Typ null to
+        obiekt, undefined nie ma typu. Obie maja wartosc False.
+      </p>
+
+      <p class="question">Czym sie rozni "==" od "===</p>
+      <p class="answer">== porownuje tylko wartosc a === wartosc i typ</p>
+
+      <p class="question">Co to sa pseudoselektory</p>
+      <p class="answer">
+        W Css mamy pseudoselektory, ktore dziela sie na pseudoelementy ( ::
+        (::before, ::after, )) i pseudoklasy (:) (:nth-child, :visited, :focus).
+      </p>
+      <p class="question">JAkie sa package managery dla JS</p>
+      <p class="answer">NPm i Yarn</p>
+      <p class="question">JAkie sa rodzaje display:</p>
+      <p class="answer">
+        domyslny: inline - w linii none - jakby nie bylo danego elementu w
+        drzewie DOM, block - blockowy,flex - jednowymiarowy, gird -
+        dwuwymiarowy, table- zmusza do wyswietlania ja tabeli
+      </p>
+      <p class="question">Roznica miedzy ID a class</p>
+      <p class="answer">
+        Klasa moze okreslac wiecej niz jeden element, a id z reguly jest
+        unikalny, zwykle uzywam klas.
+      </p>
+      <p class="question">
+        Czym sie rozni position relative od position absolute? Jakie sa inne
+        rodzaje position:
+      </p>
+      <p class="answer">
+        Pozycje pozwalaja na zmiane polozenia elementow wobec pierwotnego
+        markupu. Domyslna pozycja to static. Position relative pozwala na
+        przesuniecie danego elementu wobec pierwotnego polozenia. Position
+        absolute pozwala na pozycjonowanie wobec elementu rodzica ktory ma
+        okreslona pozycjne inna niz static. Poisiton fixed ustala pozycjonowanie
+        wobec viewportu i przykleja element na stale.(dobre to np. navbarow).
+        Position sticky uklada element zgodnei z jego markupem natomiast w
+        momencie, gdy powienien opuscic viewport zmienia mu pozycje na fixed.
+      </p>
+      <p class="question">Co to flexbox i jakie ma mozliwosci</p>
+      <p class="answer">
+        Flexbox to rodzaj display ( konkretnie display:flex) ktory umozliwia
+        ukladanie elementow w jednej osi. Pozwala tez np. na zawijanie elementow
+        zaleznie od rozmiaru viewporta ( wrap)
+      </p>
+      <p class="question">JAkie sa roznice miedzy bootstrap 3 i 4</p>
+      <p class="answer">Bootstrap 3 bazowal na LESS a 4 na SASS.</p>
+      <p class="question">Co to sa Lintery:</p>
+      <p class="answer">
+        Programy szukajace roznego rodzaju niescislosci w kodzie, poprawiajace
+        bledy i ogolna jakosc kodu
+      </p>
+      <p class="question">Jak rozwiazywac konflikty w mergu?</p>
+      <p class="answer">ds</p>
+      <p class="question">Formularze w HTML, przydatne info:</p>
+      <p class="answer">
+        typy inputów: text, checkbox, email, submit, button, number, password,
+        reset, radio. "required" - sprawia, ze dane pole jest wymagane. "pattern
+        " = oczekuje jakiegos patternu od inputu podanego przez uzytkownika
+        "[Ba]nana/[Cc]herry". Action z kolei okresla gdzie wysylany jest form.
+      </p>
+      <p class="question">Jak wybrac element w JQuerry?</p>
+      <p class="answer">
+        Tak jak przez querrySelector w normlanym JS po ES6, tylko ze znak dolara
+        $(".class").addClass("red").
+      </p>
+      <p class="question">Preprocesory htmL?</p>
+      <p class="answer">Pug, Slim</p>
+      <p class="question">JAk w Jquerry zaznaczyc inputy typu text?</p>
+      <p class="answer">
+        $("input[type='text']").on("click", function () { $(this).select(); });
+      </p>
+      <p class="question">Roznica miedzy merge a rebase?</p>
+      <p class="answer">
+        Przy merge mamy dwie galezie z ktorej jedna podlacza sie pod druga i
+        mamy dwie oddzielne historie commitow, przy rebase podpinamy dany branch
+        pod master i zachowana jest lienarna historia bez wcommitow bez wzmianki
+        o branchu
+      </p>
+      <p class="question">Co to branch?</p>
+      <p class="answer">
+        To pewne rozgalezienie od glownej wersji projektu. Na takiej galezi
+        opracowujemy kod w separacji od np. mastera zeby zachowac tam stabilna
+        wersje. Mozemy np. dla danej funkcjonalnosci pisac kod i potem wlaczyc
+        go do mastera lub deva. Rozdzial na branche pozwala, takze wielu
+        programistom pracowac nad roznymi zadaniami przy danym projekcie.
+      </p>
+      <p class="question">Co to git?</p>
+      <p class="answer">
+        Rozproszony system kontroli wersji. Jest darmowy i open source.
+        Stworzony przez Linusa Torvaldsa tworce Linuxa.
+      </p>
+      <p class="question">Co to sa task runnery?</p>
+      <p class="answer">
+        Narzedzia frontendowe, automatyzujace zadania ktore sa powtarzalne: np
+        transpilowanie, babel.
+      </p>
+      <p class="question">Co to jest API</p>
+      <p class="answer">
+        Interfejs programistyczny aplikacji. Okresla w jaki sposob poszczegolne
+        programy komunikuja sie ze soba. Np. duze serwisy udostepniaja swoje API
+        umozliwiajac aplikacjom komunikowanie sie z ich zasobami w okreslony
+        przez nich sposob. API maja takze np. przegladarki.
+      </p>
+      <p class="question">Co to SOAP?</p>
+      <p class="answer">Protokol komunikacyjny oparty o XML i HTML</p>
+      <p class="question">Co to W3C?</p>
+      <p class="answer">
+        Organizacja ustalajca standardy pisaiania i przesylu stron www.
+      </p>
+      <p class="question">Co to sa wzorce projetkowe?</p>
+      <p class="answer">
+        Są to określone, uniwersalne i sprawdzone sposoby rozwiazwania pewnych
+        powtarzalnych problemow projektowych. Ułatwiają zarzadzanie i utrzymanie
+        kodu. Wzorzec sklada sie z 4 elementów. NAzwy, problemu, rozwiazania,
+        konsekwencji. Problem - opisuje sposoby rozpoznania sytuacji, w ktorej
+        mozemy zastosowac dany wzorzec oraz warunki jakie powinny byc spelnione
+        by zastosownie mialo sens. Rozwiazanie - obejmuje elementy rozwiazania.
+        Konsekwencje- zestawienie wad i zalet zastosowania danego wzorca
+      </p>
+      <p class="question">JAkie są typy wzorców projektowych?</p>
+      <p class="answer">
+        Kreacyjne, MVC, strukturalne, czynnościowe, klasaoe, obiektowe
+      </p>
+      <p class="question">Co to jest wzorzec MVC?</p>
+      <p class="answer">Model View Controler.</p>
+      Model - reprezentuje ,dane np. pozyskiwane z bazy danych lub parsowane.
+      Tutaj znajduja sie obiekty, ktore sluza do wykonywania operacji zwiazanych
+      z funkcjonalnoscia i logika biznesowa. View - odpowiada za prezentacje
+      danych. Contoreler - za logike, przetwarza operacje uzytkownika.
+      <p class="question">Zalety MVC?</p>
+      <p class="answer">
+        Oddziela logike od prezencji, sprzyja modulowosci, ulatwia prace
+        zespolowa, sprzyja czystemu kodowi.
+      </p>
+      <p class="question">Co to programowanie obietkowe?</p>
+      <p class="answer">
+        Jest to jeden z paradygmatów programowania, który stawia sobie za
+        zadanie prezentacje świata poprzez obiekty. Obiekty posiadją pola oraz
+        metody. Pola (dane informacje obiekcie). Programowanie to polega na
+        definiowaiu obiektow i ich wspoldzialaniu ze soba poprzez metody.
+      </p>
+      <p class="question">
+        Jakie załozenia mozna spotkac w programowaniu obiektowym?
+      </p>
+      <p class="answer">
+        <ul>
+            <li>Abstrakcja: zaklada istnienie modelu, ktory sam w sobie nie reprezentuje
+        zadnego istneiejacego obiektu, natomiast na jego podstawie definiowane
+        sa inne obiekty. Podstawowym przykladem jest klasa. (ssak, zwierze).</li>
+
+        <li>Dziedziczenie: Technika wykorzystanie istniejacej klasy do utworzenia
+        nowej bazujacej na poprzedniczce. </li>
+        <li>Polimorfizm: pozwala traktoac rozne
+        dane w ten sam sposob, mamy wiele klas roznych figur gemometrycznych
+        dizeczoacych z jednej klasy absrakyjcne. Dla kazdej figury mamy metode
+        obliczPole() i w zaleznosci od typu obiektu zostanie wykonana ta
+        wlasciwa.</li>
+        <li>hermetyzacja:
+            Ukrywanie w obiektach tego do czego uzytkownik nie powinien miec dostepu. Obecnie panuje trend pisania kodu zamknietego. W c# mamy modyfikatory dostepu.
+        </li>
+        </ul>
+
+      </p>
+      <p class="question">Co oznacza SOLID w programowainu obietkowym?</p>
+        <ul class="answer">
+          <li>Single Responsibility: klasa powinna sie zajmowac jedna rzecza, rozwiazywac jeden problem</li>
+          <li>Open - close principle - klasa otwarta na rozszerzenia i zamkneita na modyfikacje</li>
+        <li> Liskov Subsitution PRinciple - Funkcje które używają wskaźników lub referencji do klas bazowych, muszą być w stanie używać również obiektów klas dziedziczących po klasach bazowych, bez dokładnej znajomości tych obiektów.</li>
+    <li>Interface segregattion principle - rozczlonkowanie duzych wielozadaniowych interfejsow na mniejsze dedykowane</li>  
+<li>Dependecy inversion principle - wyskopoziomowe moduly nie powinny byc zalezne od niskopoziomowych tylko od abstrakcji</li>    
+</ul>
+        <p class="question">Co to jest inteface?</p>
+      <p class="answer"></p>
+      <p class="question"></p>
+      <p class="answer"></p>
+      <p class="question"></p>
+      <p class="answer"></p>
+      <p class="question"></p>
+      <p class="answer"></p>
+    </div>
+    <script src="nauka.js"></script>
+  </body>
+</html>

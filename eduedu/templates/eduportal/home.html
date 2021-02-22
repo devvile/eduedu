@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <header></header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'nauka' %}">Pytania Rekrutacyjne</a></li>
+        <li><a href="{% url 'podstawy' %}">Podstawy JS</a></li>
+      </ul>
+    </nav>
+    <article class="a"></article>
+    <article class="b"></article>
+    <article class="c"></article>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/podstawy.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <div class="mid">
+      <section class="navfill"></section>
+      <nav>
+        <ul>
+          <li><a href="{% url 'index' %}">HOME</a></li>
+        </ul>
+      </nav>
+      <main></main>
+    </div>
+    <footer></footer>
+  </body>
+  <script src="{% static 'js/podstawy.js' %}"></script>
+</html>
