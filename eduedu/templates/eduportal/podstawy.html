@@ -1,13 +1,8 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %} Podstawy JS {% endblock %}
 {% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/podstawy.css' %}" />
-    <title>Document</title>
-  </head>
-  <body>
+{% block css %} <link rel="stylesheet" href="{% static 'css/podstawy.css' %}"> {% endblock %}
+{% block content%}
     <header></header>
     <div class="mid">
       <section class="navfill"></section>
@@ -21,4 +16,4 @@
     <footer></footer>
   </body>
   <script src="{% static 'js/podstawy.js' %}"></script>
-</html>
+{% endblock%}
