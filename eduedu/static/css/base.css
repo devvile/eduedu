@@ -1,7 +1,57 @@
 * {
-  color: red;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.content {
-  background-color: aliceblue;
+body {
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+nav {
+  height: 220px;
+  width: 100vw;
+  background-color: black;
+}
+
+.belka {
+  width: 100vw;
+  height: 15px;
+  background-color: darkorange;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  color: red;
+  padding: 20px;
+  list-style: none;
+}
+
+a {
+  margin: 20px;
+  padding: 20px;
+  color: aliceblue;
+  border: 2px solid darkorange;
+  margin: 10px;
+}
+
+main {
+  margin: 50px;
+}
+
+footer {
+  height: 180px;
+  width: 100%;
+  background-color: black;
 }

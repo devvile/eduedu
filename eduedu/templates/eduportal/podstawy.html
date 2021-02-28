@@ -1,19 +1,17 @@
-{% extends 'base.html' %}
-{% block title %} Podstawy JS {% endblock %}
-{% load static %}
-{% block css %} <link rel="stylesheet" href="{% static 'css/podstawy.css' %}"> {% endblock %}
+{% extends 'base.html' %} {% block title %} Podstawy JSssssssss {% endblock %}
+{% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/podstawy.css' %}" /> {% endblock %}
 {% block content%}
-    <header></header>
-    <div class="mid">
-      <section class="navfill"></section>
-      <nav>
-        <ul>
-          <li><a href="{% url 'index' %}">HOME</a></li>
-        </ul>
-      </nav>
-      <main></main>
-    </div>
-    <footer></footer>
-  </body>
-  <script src="{% static 'js/podstawy.js' %}"></script>
+
+<div class="mid">
+  <section class="navfill"></section>
+  <section>
+    <ul>
+      <li><a href="{% url 'index' %}">HOME</a></li>
+    </ul>
+  </section>
+  <section class="cards"></section>
+</div>
+
+<script src="{% static 'js/podstawy.js' %}"></script>
 {% endblock%}

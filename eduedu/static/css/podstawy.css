@@ -4,35 +4,16 @@
   box-sizing: border-box;
 }
 
-.mid {
-  display: grid;
-  grid-template-areas: "navfill mejn mejn mejn mejn";
-}
-
 .hidden {
   visibility: hidden;
   display: none;
 }
 
-main {
+.cards {
   display: flex;
-  height: 80vh;
-  grid-area: mejn;
+  width: 100%;
   flex-wrap: wrap;
   margin: 20px;
-}
-
-nav {
-  position: fixed;
-  padding: 30px;
-  left: 0;
-  width: 15vw;
-  height: 40vh;
-  border: 2px solid black;
-}
-.navfill {
-  grid-area: navfill;
-  width: 15vw;
 }
 
 .klocek {
@@ -41,21 +22,6 @@ nav {
   margin: 30px;
   padding: 20px;
   border: 2px solid black;
-}
-
-footer {
-  background-color: black;
-  height: 12vh;
-  width: 100%;
-  position: fixed;
-  margin-top: 20px;
-  bottom: 0;
-}
-
-header {
-  background-color: black;
-  height: 8vh;
-  width: 100%;
 }
 
 ul {

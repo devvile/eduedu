@@ -8,6 +8,16 @@
     {% block css%} {% endblock %}
   </head>
   <body>
-    <div class="content">{% block content %} {% endblock %}</div>
+    <nav>
+      <div class="belka">
+        <div class="orange"></div>
+      </div>
+      <ul>
+        <li><a href="{% url 'nauka' %}">Pytania Rekrutacyjne</a></li>
+        <li><a href="{% url 'podstawy' %}">Podstawy JS</a></li>
+      </ul>
+    </nav>
+    <main>{% block content %} {% endblock %}</main>
+    <footer></footer>
   </body>
 </html>

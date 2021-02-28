@@ -1,7 +1,7 @@
 let main = () => {
   //Variables declaration
 
-  const mejn = document.querySelector("main");
+  const mejn = document.querySelector(".cards");
   const dataPack = {
     content: [
       {

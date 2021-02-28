@@ -1,16 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block title %} Edu Edu - from
 myself to myself {% endblock %} {% block css %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}" /> {% endblock %}
-{%block content %}
-<header></header>
-<nav>
-  <ul>
-    <li><a href="{% url 'nauka' %}">Pytania Rekrutacyjne</a></li>
-    <li><a href="{% url 'podstawy' %}">Podstawy JS</a></li>
-  </ul>
-</nav>
-<article class="a"></article>
-<article class="b"></article>
-<article class="c"></article>
-<footer></footer>
+<!---->{% block content %}
+
+<div class="main-content"></div>
 {% endblock %}
