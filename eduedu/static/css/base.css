@@ -4,54 +4,66 @@
   box-sizing: border-box;
 }
 
+:root {
+  --gap: 18vh;
+}
 body {
-  overflow-y: hidden;
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 
 nav {
-  height: 220px;
+  position: fixed;
+  top: 0;
+  height: var(--gap);
   width: 100vw;
-  background-color: black;
+  font-family: "Dosis", sans-serif;
+  background-color: white;
 }
 
-.belka {
-  width: 100vw;
-  height: 15px;
-  background-color: darkorange;
-  margin: 0;
-  position: absolute;
-  left: 0;
-  top: 50px;
-}
-
-ul {
+.menu {
   display: flex;
-  align-items: center;
-}
-
-li {
-  color: red;
-  padding: 20px;
+  justify-content: left;
+  align-items: flex-end;
   list-style: none;
 }
 
-a {
-  margin: 20px;
-  padding: 20px;
-  color: aliceblue;
-  border: 2px solid darkorange;
-  margin: 10px;
+.--up {
+  position: relative;
+  bottom: 20px;
 }
 
 main {
-  margin: 50px;
+  position: absolute;
+  top: var(--gap);
+  width: 100vw;
+  height: calc(100vh - var(--gap) - 8vh);
+  border: 2px solid black;
+  z-index: 10;
+  overflow: hidden;
+  padding: 20px var(--gap);
+}
+
+.edu {
+  height: var(--gap);
+  position: relative;
+  margin: 0 10px;
+}
+
+.menu-item {
+  margin-bottom: 100px;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
 }
 
 footer {
-  height: 180px;
-  width: 100%;
-  background-color: black;
+  position: fixed;
+  bottom: 0;
+  height: 8vh;
+  width: 100vw;
+  background-color: red;
+}
+
+.belka {
+  background-color: orange;
 }
