@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Edu Edu - from
+myself to myself {% endblock %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}" /> {% endblock %}
+<!---->{% block content %}
+<section class="side-menu">
+  <li><a href="#">Lista wpisów</a></li>
+  <li><a href="{% url 'add_note' %}">Dodaj Wpis</a></li>
+  <li><a>Python</a></li>
+  <li><a>Python</a></li>
+  <li><a>Python</a></li>
+  <li><a>Python</a></li>
+</section>
+<section class="work_space"></section>
+<script src="{% static 'js/add_note.js' %}"></script>
+{% endblock %}

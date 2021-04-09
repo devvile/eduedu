@@ -5,6 +5,11 @@
     <meta charset="UTF-8" />
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400&display=swap"
+      rel="stylesheet"
+    />
     {% block css%} {% endblock %}
   </head>
   <body>
@@ -12,9 +17,22 @@
       <div class="belka">
         <div class="orange"></div>
       </div>
-      <ul>
-        <li><a href="{% url 'nauka' %}">Pytania Rekrutacyjne</a></li>
-        <li><a href="{% url 'podstawy' %}">Podstawy JS</a></li>
+      <ul class="menu">
+        <li class="logo">
+          <img class="edu" src="{% static 'img/edu.jpg'%}" alt="" />
+        </li>
+        <li><a class="menu-item --up" href="{% url 'index' %}">Home</a></li>
+        <li>
+          <a class="menu-item --up" href="{% url 'nauka' %}">
+            Pytania Rekrutacyjne
+          </a>
+        </li>
+        <li>
+          <a class="menu-item --up" href="{% url 'podstawy' %}">Podstawy JS</a>
+        </li>
+        <li>
+          <a class="menu-item --up" href="{% url 'admin_panel' %}"> Admin </a>
+        </li>
       </ul>
     </nav>
     <main>{% block content %} {% endblock %}</main>
