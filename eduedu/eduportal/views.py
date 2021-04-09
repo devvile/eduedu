@@ -10,3 +10,6 @@ def nauka(request):
 def podstawy(request):
     print(request)
     return render(request, './eduportal/podstawy.html')
+
+def admin_panel(request):
+    return render(request, './eduportal/admin_panel.html')
