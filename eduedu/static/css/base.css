@@ -38,6 +38,7 @@ nav {
   border: 2px solid black;
   border-radius: 10px;
   list-style: none;
+  background-color: white;
 }
 
 .side-menu li {
@@ -63,7 +64,8 @@ main {
   border: 2px solid black;
   z-index: 10;
   overflow: hidden;
-  padding: 50px var(--side-menu);
+  padding: 20px var(--side-menu);
+  background-color: whitesmoke;
 }
 
 .edu {
@@ -89,4 +91,12 @@ footer {
 
 .belka {
   background-color: orange;
+}
+
+.work_space {
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
