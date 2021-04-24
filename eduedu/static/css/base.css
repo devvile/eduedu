@@ -86,7 +86,7 @@ footer {
   bottom: 0;
   height: 8vh;
   width: 100vw;
-  background-color: red;
+  background-color: hsla(0, 89%, 31%, 1);
 }
 
 .belka {
